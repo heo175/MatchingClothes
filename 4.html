@@ -1,0 +1,147 @@
+
+<!--허윤신-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--부트스트랩-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--부트스트랩-->
+
+    <!-- 4.html 움직이는 애 css -->
+        <!-- Favicon  -->
+        <link rel="icon" href="img/core-img/favicon.ico">
+
+        <!-- Core Style CSS -->
+        <link rel="stylesheet" href="css/core-style.css">
+        <link rel="stylesheet" href="style.css">
+    
+        <!-- Responsive CSS -->
+        <link href="css/responsive.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!--네브바-->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light  navbar navbar-dark bg-dark container-fluid">
+    <a class="navbar-brand" href="main.html">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container">
+      <div class="row-9">
+      </div>
+      <div class="row-3">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav " style="float: right;">
+            <a class="nav-item nav-link active" href="1.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="2.html">Features</a>
+            <a class="nav-item nav-link" href="3.html">Pricing</a>
+            <a class="nav-item nav-link" href="4.html">Disabled</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+<!--네브바-->
+
+    <!--컨텐츠 컨테이너1-->
+    <div class="container-flud" style="height: 80vh;">
+    <div class="welcome-area">
+
+<!-- ***** Welcome Area Start ***** -->
+
+  <div class="carousel h-100 slide" data-ride="carousel" id="welcomeSlider">
+      <!-- Carousel Inner -->
+      <div class="carousel-inner h-100">
+
+          <div class="carousel-item h-100 bg-img active" style="background-image: url(img/bg-img/1.jpg);">
+            <a href="help.html">  
+            <div class="carousel-content h-100">
+                  <div class="slide-text">
+                      <span>01.</span>
+                      <h2> 대학교 개강룩 </h2>
+                  </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/2.jpg);">
+            <a href="help.html">  
+              <div class="carousel-content h-100">
+                    <div class="slide-text">
+                        <span>02.</span>
+                        <h2> 소개팅룩 </h2>
+                    </div>
+                </div>
+              </a>
+          </div>
+
+          <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/3.jpg);">
+            <a href="help.html">  
+              <div class="carousel-content h-100">
+                    <div class="slide-text">
+                        <span>03.</span>
+                        <h2> 꾸안꾸 </h2>
+                    </div>
+                </div>
+              </a>
+        </div>
+        <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/4.jpg);">
+          <a href="help.html">  
+            <div class="carousel-content h-100">
+                  <div class="slide-text">
+                      <span>04.</span>
+                      <h2> 데이트 코디 </h2>
+                  </div>
+              </div>
+            </a>
+        </div>
+        <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/5.jpg);">
+          <a href="help.html">  
+            <div class="carousel-content h-100">
+                  <div class="slide-text">
+                      <span>05.</span>
+                      <h2> 교수님 면담 </h2>
+                  </div>
+              </div>
+            </a>
+        </div>
+          
+      </div>
+      <!-- Carousel Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#welcomeSlider" data-slide-to="0" class="active bg-img" style="background-image: url(img/bg-img/1.jpg);"></li>
+        <li data-target="#welcomeSlider" data-slide-to="1" class="bg-img" style="background-image: url(img/bg-img/2.jpg);"></li>
+        <li data-target="#welcomeSlider" data-slide-to="2" class="bg-img" style="background-image: url(img/bg-img/3.jpg);"></li>
+        <li data-target="#welcomeSlider" data-slide-to="3" class="bg-img" style="background-image: url(img/bg-img/4.jpg);"></li>
+        <li data-target="#welcomeSlider" data-slide-to="4" class="bg-img" style="background-image: url(img/bg-img/5.jpg);"></li>
+        <li data-target="#welcomeSlider" data-slide-to="4" class="bg-img" style="background-image: url(img/bg-img/more.jpg);"></li>
+        <!-- more 누르면 help 게시글 목록으로 가게 -->
+      </ol>
+  </div>
+
+<!-- ***** Welcome Area End ***** -->
+</div>
+</div>
+
+
+
+     <!-- jQuery (Necessary for All JavaScript Plugins) -->
+     <script src="js/jquery/jquery-2.2.4.min.js"></script>
+     <!-- Popper js -->
+     <script src="js/popper.min.js"></script>
+     <!-- Bootstrap js -->
+     <script src="js/bootstrap.min.js"></script>
+     <!-- Plugins js -->
+     <script src="js/plugins.js"></script>
+     <!-- Active js -->
+     <script src="js/active.js"></script>
+</body>
+</html>
