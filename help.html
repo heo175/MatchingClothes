@@ -23,6 +23,37 @@
     <link href="css/help.css" rel="stylesheet">
     <!-- 인스타 형식 -->
 
+    <!-- 달려있는 댓글 -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+    <link href="css/help2.css" rel="stylesheet">
+    <!-- 달려있는 댓글 -->
+
+    <!-- 숨김 표시 -->
+    <style>
+      .toggle-content {
+        display: none;
+        height: 0;
+        overflow: hidden;
+        transition: height 350ms ease-in-out;
+      }
+
+      .toggle-content.is-visible {
+        display: block;
+        height: auto;
+      }
+    </style>
+    <!-- 숨김 표시 -->
+
+    <!-- 댓글에 첨부된 사진 -->
+
+    <link href="css/cpicture.css" rel="stylesheet">
+    <!-- 댓글에 첨부된 사진 -->
+   
 </head>
 <body>
 
@@ -81,15 +112,16 @@
                    <a href=""><img class="img-fluid rounded-circle" src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/4.jpg" alt="User"></a>
                   </div>
                   <div class="media-body">
-                   <p class="m-0">Benjamin Robinson</p>
-                   <small><span><i class="icon ion-md-pin"></i> Nairobi, Kenya</span></small>
-                   <small><span><i class="icon ion-md-time"></i> 10 hours ago</span></small>
+                   <p class="m-0"><b>"소개팅룩 골라주세요~"</b></p>
+                   <small><span><i class="icon ion-md-pin"></i> 글작성자 </span></small>
+                   <small><span><i class="icon ion-md-time"></i> 10 hours ago </span></small>
                   </div>
                  </div><!--/ media -->
                 </div><!--/ cardbox-heading -->
                  
                 <div class="cardbox-item">
-                 <img class="img-fluid" src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/1.jpg" alt="Image">
+                 <img class="img-fluid" src="img/clothes-img/style.jpg" alt="Image">
+                 <p style="text-align: center;">내일 소개팅인데 이런 느낌으로 입고 싶거든요. 추천 부탁 드립니다.</p>
                 </div><!--/ cardbox-item -->
                 <div class="cardbox-base">
                  <ul class="float-right">
@@ -107,15 +139,175 @@
                   <li><a><span>242 Likes</span></a></li>
                  </ul>			   
                 </div><!--/ cardbox-base -->
-                <div class="cardbox-comments">
-                 <span class="comment-avatar float-left">
-                  <a href=""><img class="rounded-circle" src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/6.jpg" alt="..."></a>                            
-                 </span>
-                 <div class="search">
-                  <input placeholder="Write a comment" type="text">
-                  <button><i class="fa fa-camera"></i></button>
-                 </div><!--/. Search -->
-                </div><!--/ cardbox-like -->			  
+                
+                <!-- 댓글창 -->
+<div class="container">
+   
+	<div class="row d-flex align-items-center" style="margin: 0;">
+	    	
+	        <div class="comments-section" style="margin-bottom: 10px;">
+	             <!--====COMMENT AREA START====-->
+	            <div class="row">
+	                <div class="col-12">
+                <h2>Comments</h2>
+	            		<form class="comment-form" method="post" action="">
+										<textarea class="comment-area" name="user_comment" placeholder="Write your comment here" ></textarea>
+                     
+                <!-- 숨김 -->
+                  <a class="toggle btn btn-primary" href="#example" style="margin-top: 5px;">옷장보기</a>
+                 <!-- 숨김 -->
+                
+                    <button type="submit" class="btn  comment-btn">댓글 작성</button>
+                  </form>
+                  <!-- 숨김 -->
+                  <div class="toggle-content" id="example" style="margin: 10px">
+                    여기에 옷장을 넣으면 된다!
+                  </div>
+                  <!-- 숨김 -->
+						</div>
+				</div>
+				
+				
+                 <!-- =======COMMENTS START=======-->
+            	<div class="row">
+	    <div class="col-12">
+	
+		<div class="comment-box-wrapper">
+	<div class="comment-box">
+	<img src="https://cdn.pixabay.com/photo/2017/04/06/19/34/girl-2209147_960_720.jpg"  class="commenter-image" alt="commenter_image">
+	<div class="comment-content">
+	<div class="commenter-head"><span class="commenter-name"><a href="" >댓글작성자</a></span> <span class="comment-date"><i class="far fa-clock"></i>2 days ago</span></div>
+		<div class="comment-body">
+      <span class="comment">이렇게 입어보세요.</span>
+      <!-- 사진 보기 -->
+      <a class="toggle" href="#cpicture" style="margin-left: 10px;">코디 보기</a>
+		</div>
+		<div class="comment-footer">
+			<span class="comment-likes">55 <a href="" class="comment-action active"> <i class="far fa-heart"></i></a></span> <span class="comment-reply">2 <a href="" class="comment-action">Replies</a></span>
+		</div>
+	</div>
+  </div>
+  
+ <!-- 사진 보여짐 -->
+ <div class="toggle-content" id="cpicture" style="margin: 10px">
+  <div class="container">
+    <div class="row_c">
+  <div class="column_c">
+    <img src="img/clothes-img/top1.jpg" width="50px" height="50px" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column_c">
+    <img src="img/clothes-img/top2.jpg" width="50px" height="50px" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column_c">
+    <img src="img/clothes-img/top3.jpg" width="50px" height="50px" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column_c">
+    <img src="img/clothes-img/top4.jpg" width="50px" height="50px" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">×</span>
+  <div class="modal-content">
+
+    <div class="mySlides" style="text-align: center;">
+      <div class="numbertext">1 / 4</div>
+        <img src="img/clothes-img/top1.jpg" style="width:50%;">
+    </div>
+
+    <div class="mySlides"  style="text-align: center;">
+      <div class="numbertext">2 / 4</div>
+        <img src="img/clothes-img/top2.jpg" style="width:50%">
+    </div>
+
+    <div class="mySlides"  style="text-align: center;">
+      <div class="numbertext">3 / 4</div>
+        <img src="img/clothes-img/top3.jpg" style="width:50%">
+    </div>
+
+    <div class="mySlides"  style="text-align: center;">
+      <div class="numbertext">4 / 4</div>
+        <img src="img/clothes-img/top4.jpg" style="width:50%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+ <!-- 사진 보여짐 -->
+
+	<div class="nested-comments"> <!--대댓글-->
+	    
+	<div class="comment-box-wrapper">
+	<div class="comment-box">
+	<img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/4.jpg"  class="commenter-image" alt="commenter_image">
+	<div class="comment-content">
+		<div class="commenter-head"><span class="commenter-name"><a href="" >글작성자</a></span> <span class="comment-date"><i class="far fa-clock"></i>2 days ago</span></div>
+		<div class="comment-body">
+			<span class="comment">올 예쁘네용</span>
+		</div>
+		<div class="comment-footer">
+			<span class="comment-likes">1 <a href="" class="comment-action active"> <i class="far fa-heart"></i></a></span> <span class="comment-reply">1 <a href="" class="comment-action">Reply</a></span>
+		</div>
+		
+		
+	</div>
+		
+	</div>
+</div>
+
+
+	<div class="comment-box-wrapper">
+	<div class="comment-box">
+	<img src="https://cdn.pixabay.com/photo/2017/04/06/19/34/girl-2209147_960_720.jpg"  class="commenter-image" alt="commenter_image">
+	<div class="comment-content">
+		<div class="commenter-head"><span class="commenter-name"><a href="" >댓글작성자</a></span> <span class="comment-date"><i class="far fa-clock"></i>2 days ago</span></div>
+		<div class="comment-body">
+			<span class="comment">감사</span>
+		</div>
+		<div class="comment-footer">
+			<span class="comment-likes">1 <a href="" class="comment-action active"> <i class="far fa-heart"></i></a></span> <span class="comment-reply">0 <a href="" class="comment-action">Reply</a></span>
+		</div>
+	</div>
+		
+	</div>
+</div>
+  </div> 
+  
+</div>
+	<div class="comment-box-wrapper">
+	<div class="comment-box">
+	<img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/1.jpg"  class="commenter-image" alt="commenter_image">
+	<div class="comment-content">
+		<div class="commenter-head"><span class="commenter-name"><a href="" >댓글작성자2</a></span> <span class="comment-date"><i class="far fa-clock"></i>1 days ago</span></div>
+		<div class="comment-body">
+			<span class="comment">이건 어떠세요? 이건 어떠세요? 이건 어떠세요? 이건 어떠세요?</span>
+      <!-- 사진 보기 -->
+      <a class="toggle" href="#cpicture2" style="margin-left: 10px;">코디 보기</a>
+    </div>
+		<div class="comment-footer">
+			<span class="comment-likes">13 <a href="" class="comment-action active"> <i class="far fa-heart"></i></a></span> <span class="comment-reply">0 <a href="" class="comment-action">Reply</a></span>
+    </div>
+	</div>
+  </div>
+  <!-- 사진 보여짐 -->
+ <div class="toggle-content" id="cpicture2" style="margin: 10px">
+
+</div>
+
+	</div>
+	</div>
+			</div>
+	    </div>
+</div>
+<!-- 댓글창 -->
                        
                </div><!--/ cardbox -->
                
@@ -123,9 +315,13 @@
             </div><!--/ container -->
            </section>
 
+
+
     </div>
 
 
-
+    <script src="js/comment.js"></script>
+    <script src="js/hide.js"></script>
+    <script src="js/cpicture.js"></script>
 </body>
 </html>
