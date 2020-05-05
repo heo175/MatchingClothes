@@ -23,6 +23,10 @@
     <link href="css/help.css" rel="stylesheet">
     <!-- 인스타 형식 -->
 
+    <!-- 옷장보기 -->
+    <link href="css/closet.css" rel="stylesheet">
+    <!-- 옷장보기 -->
+
     <!-- 달려있는 댓글 -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -150,20 +154,83 @@
 	            <div class="row">
 	                <div class="col-12">
                 <h2>Comments</h2>
-	            		<form class="comment-form" method="post" action="">
+	            		<form class="comment-form">
 										<textarea class="comment-area" name="user_comment" placeholder="Write your comment here" ></textarea>
                      
-                <!-- 숨김 -->
+                <!-- 옷장보기 버튼 -->
                   <a class="toggle btn btn-primary" href="#example" style="margin-top: 5px;">옷장보기</a>
-                 <!-- 숨김 -->
+                 <!-- 옷장보기 버튼 -->
                 
-                    <button type="submit" class="btn  comment-btn">댓글 작성</button>
+                    <button class="btn comment-btn">
+                      <a class="toggle" href="#newcomment">댓글 작성</a> 
+                    </button>
                   </form>
-                  <!-- 숨김 -->
+                  <!-- 옷장보기 버튼 누르면 나오는 공간 -->
                   <div class="toggle-content" id="example" style="margin: 10px">
-                    여기에 옷장을 넣으면 된다!
+                    <div class="row">
+                      <div class="kudos-wrap">
+                              <ul>
+                               <li><input type="checkbox" class="cb" id="cb1" />
+                                 <label for="cb1"><img src="img/clothes-img/outer1.jpg" /></label>
+                               </li>
+                               <li><input type="checkbox" class="cb" id="cb2" />
+                                 <label for="cb2"><img src="img/clothes-img/outer2.jpg" /></label>
+                               </li>
+                               <li><input type="checkbox" class="cb" id="cb3" />
+                                 <label for="cb3"><img src="img/clothes-img/outer3.jpg" /></label>
+                               </li>
+                               <li><input type="checkbox" class="cb" id="cb4" />
+                                 <label for="cb4"><img src="img/clothes-img/top1.jpg" /></label>
+                               </li>
+                               <li><input type="checkbox" class="cb" id="cb5" />
+                                <label for="cb5"><img src="img/clothes-img/top2.jpg" /></label>
+                              </li>
+                              <li><input type="checkbox" class="cb" id="cb6" />
+                                <label for="cb6"><img src="img/clothes-img/top3.jpg" /></label>
+                              </li>
+                              <li><input type="checkbox" class="cb" id="cb7" />
+                                <label for="cb7"><img src="img/clothes-img/pants1.jpg" /></label>
+                              </li>
+                              <li><input type="checkbox" class="cb" id="cb8" />
+                                <label for="cb8"><img src="img/clothes-img/pants2.jpg" /></label>
+                              </li>
+                              <li><input type="checkbox" class="cb" id="cb9" />
+                                <label for="cb9"><img src="img/clothes-img/pants4.jpg" /></label>
+                              </li>
+                              <li><input type="checkbox" class="cb" id="cb10" />
+                                <label for="cb10"><img src="img/clothes-img/skirt1.jpg" /></label>
+                              </li>
+                              <li><input type="checkbox" class="cb" id="cb11" />
+                                <label for="cb11"><img src="img/clothes-img/skirt4.jpg" /></label>
+                              </li>
+                              <li><input type="checkbox" class="cb" id="cb12" />
+                                <label for="cb12"><img src="img/clothes-img/skirt5.jpg" /></label>
+                              </li>
+                              <li><input type="checkbox" class="cb" id="cb13" />
+                                <label for="cb13"><img src="img/clothes-img/ops1.jpg" /></label>
+                              </li>
+                              <li><input type="checkbox" class="cb" id="cb14" />
+                                <label for="cb14"><img src="img/clothes-img/ops2.jpg" /></label>
+                              </li>
+                              <li><input type="checkbox" class="cb" id="cb15" />
+                                <label for="cb15"><img src="img/clothes-img/ops3.jpg" /></label>
+                              </li>
+                              <li><input type="checkbox" class="cb" id="cb16" />
+                                <label for="cb16"><img src="img/clothes-img/shoes1.jpg" /></label>
+                              </li>
+                              <li><input type="checkbox" class="cb" id="cb17" />
+                                <label for="cb17"><img src="img/clothes-img/shoes2.jpg" /></label>
+                              </li>
+                              <li><input type="checkbox" class="cb" id="cb18" />
+                                <label for="cb18"><img src="img/clothes-img/shoes3.jpg" /></label>
+                              </li>
+
+                             </ul>
+                             <button type="button" class="btn btn-light" id="choosingbtn" style="float: right; margin-right: 5%;">선택 완료</button>
+                           </div>
+                      </div>
                   </div>
-                  <!-- 숨김 -->
+                  <!-- 옷장보기 버튼 누르면 나오는 공간 -->
 						</div>
 				</div>
 				
@@ -243,12 +310,12 @@
 </div>
  <!-- 사진 보여짐 -->
 
-	<div class="nested-comments"> <!--대댓글-->
+<div class="nested-comments"> <!--대댓글-->
 	    
-	<div class="comment-box-wrapper">
-	<div class="comment-box">
-	<img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/4.jpg"  class="commenter-image" alt="commenter_image">
-	<div class="comment-content">
+<div class="comment-box-wrapper">
+<div class="comment-box">
+<img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/4.jpg"  class="commenter-image" alt="commenter_image">
+  <div class="comment-content">
 		<div class="commenter-head"><span class="commenter-name"><a href="" >글작성자</a></span> <span class="comment-date"><i class="far fa-clock"></i>2 days ago</span></div>
 		<div class="comment-body">
 			<span class="comment">올 예쁘네용</span>
@@ -256,32 +323,30 @@
 		<div class="comment-footer">
 			<span class="comment-likes">1 <a href="" class="comment-action active"> <i class="far fa-heart"></i></a></span> <span class="comment-reply">1 <a href="" class="comment-action">Reply</a></span>
 		</div>
-		
-		
-	</div>
-		
-	</div>
+ </div>
+</div>
 </div>
 
 
-	<div class="comment-box-wrapper">
-	<div class="comment-box">
-	<img src="https://cdn.pixabay.com/photo/2017/04/06/19/34/girl-2209147_960_720.jpg"  class="commenter-image" alt="commenter_image">
-	<div class="comment-content">
-		<div class="commenter-head"><span class="commenter-name"><a href="" >댓글작성자</a></span> <span class="comment-date"><i class="far fa-clock"></i>2 days ago</span></div>
-		<div class="comment-body">
-			<span class="comment">감사</span>
-		</div>
-		<div class="comment-footer">
-			<span class="comment-likes">1 <a href="" class="comment-action active"> <i class="far fa-heart"></i></a></span> <span class="comment-reply">0 <a href="" class="comment-action">Reply</a></span>
-		</div>
-	</div>
-		
-	</div>
+<div class="comment-box-wrapper">
+<div class="comment-box">
+<img src="https://cdn.pixabay.com/photo/2017/04/06/19/34/girl-2209147_960_720.jpg"  class="commenter-image" alt="commenter_image">
+<div class="comment-content">
+  <div class="commenter-head"><span class="commenter-name"><a href="" >댓글작성자</a></span> <span class="comment-date"><i class="far fa-clock"></i>2 days ago</span></div>
+  <div class="comment-body">
+    <span class="comment">감사</span>
+  </div>
+  <div class="comment-footer">
+    <span class="comment-likes">1 <a href="" class="comment-action active"> <i class="far fa-heart"></i></a></span> <span class="comment-reply">0 <a href="" class="comment-action">Reply</a></span>
+  </div>
 </div>
-  </div> 
+</div>
+</div>
+
+</div> 
   
 </div>
+
 	<div class="comment-box-wrapper">
 	<div class="comment-box">
 	<img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/1.jpg"  class="commenter-image" alt="commenter_image">
@@ -298,11 +363,54 @@
 	</div>
   </div>
   <!-- 사진 보여짐 -->
- <div class="toggle-content" id="cpicture2" style="margin: 10px">
-
+<div class="toggle-content" id="cpicture2" style="margin: 10px">
+ 원래 여기에 코디 사진 있어야 하는데 왜 안되냐!
 </div>
 
-	</div>
+  </div>
+  
+  <!-- 새로 쓴 댓글 -->
+<div class="comment-box-wrapper" id="newcomment" style="display: none;">
+  <div class="comment-box">
+  <img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/3.jpeg"  class="commenter-image" alt="commenter_image">
+  <div class="comment-content">
+    <div class="commenter-head"><span class="commenter-name"><a href="" >댓글작성자3</a></span> <span class="comment-date"><i class="far fa-clock"></i>2 minutes ago</span></div>
+    <div class="comment-body">
+      <span class="hihi comment">여기에 내가 쓴 댓글이 써질거다</span>
+      <a class="toggle" id="noimg" href="#cpicture3" style="margin-left: 10px;">코디 보기</a>
+    </div>
+    <div class="comment-footer">
+      <span class="comment-likes">0 <a href="" class="comment-action active"> <i class="far fa-heart"></i></a></span> <span class="comment-reply">0 <a href="" class="comment-action">Reply</a></span>
+    </div>
+  </div>
+  </div>
+</div>
+  <!-- 사진 보여짐 -->
+  <div class="toggle-content" id="cpicture3" style="margin: 10px">
+    <div>
+      <img class="checkedclothes" height="100px" width="100px"/>
+      <img class="checkedclothes" height="100px" width="100px"/>
+      <img class="checkedclothes" height="100px" width="100px"/>
+      <img class="checkedclothes" height="100px" width="100px"/>
+      <img class="checkedclothes" height="100px" width="100px"/>
+      <img class="checkedclothes" height="100px" width="100px"/>
+      <img class="checkedclothes" height="100px" width="100px"/>
+      <img class="checkedclothes" height="100px" width="100px"/>
+      <img class="checkedclothes" height="100px" width="100px"/>
+      <img class="checkedclothes" height="100px" width="100px"/>
+      <img class="checkedclothes" height="100px" width="100px"/>
+      <img class="checkedclothes" height="100px" width="100px"/>
+      <img class="checkedclothes" height="100px" width="100px"/>
+      <img class="checkedclothes" height="100px" width="100px"/>
+      <img class="checkedclothes" height="100px" width="100px"/>
+      <img class="checkedclothes" height="100px" width="100px"/>
+      <img class="checkedclothes" height="100px" width="100px"/>
+      <img class="checkedclothes" height="100px" width="100px"/>
+    </div>
+  </div>
+</div>
+  <!-- 새로 쓴 댓글 -->
+
 	</div>
 			</div>
 	    </div>
