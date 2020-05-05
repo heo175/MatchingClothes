@@ -130,7 +130,7 @@
                 <div class="cardbox-base">
                  <ul class="float-right">
                   <li><a><i class="fa fa-comments"></i></a></li>
-                  <li><a><em class="mr-5">12</em></a></li>
+                  <li><a><em class="mr-5">4</em></a></li>
                   <li><a><i class="fa fa-share-alt"></i></a></li>
                   <li><a><em class="mr-3">03</em></a></li>
                  </ul>
@@ -162,14 +162,14 @@
                  <!-- 옷장보기 버튼 -->
                 
                     <button class="btn comment-btn">
-                      <a class="toggle" href="#newcomment">댓글 작성</a> 
+                      <a class="toggle text-white" href="#newcomment" style="text-decoration: none;">댓글 작성</a> 
                     </button>
                   </form>
                   <!-- 옷장보기 버튼 누르면 나오는 공간 -->
                   <div class="toggle-content" id="example" style="margin: 10px">
                     <div class="row">
                       <div class="kudos-wrap">
-                              <ul>
+                      <ul>
                                <li><input type="checkbox" class="cb" id="cb1" />
                                  <label for="cb1"><img src="img/clothes-img/outer1.jpg" /></label>
                                </li>
@@ -226,7 +226,9 @@
                               </li>
 
                              </ul>
-                             <button type="button" class="btn btn-light" id="choosingbtn" style="float: right; margin-right: 5%;">선택 완료</button>
+                             <!--
+                             <button type="button" class="btn btn-light" id="choosingbtn" style="float: right; margin-right: 10%;">선택 완료</button>
+                               -->
                            </div>
                       </div>
                   </div>
@@ -260,21 +262,21 @@
   <div class="container">
     <div class="row_c">
   <div class="column_c">
-    <img src="img/clothes-img/top1.jpg" width="50px" height="50px" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    <img src="img/clothes-img/top1.jpg" width="50px" height="50px" onclick="openModal1();currentSlide(1)" class="hover-shadow">
   </div>
   <div class="column_c">
-    <img src="img/clothes-img/top2.jpg" width="50px" height="50px" onclick="openModal();currentSlide(2)" class="hover-shadow">
+    <img src="img/clothes-img/top2.jpg" width="50px" height="50px" onclick="openModal1();currentSlide(2)" class="hover-shadow">
   </div>
   <div class="column_c">
-    <img src="img/clothes-img/top3.jpg" width="50px" height="50px" onclick="openModal();currentSlide(3)" class="hover-shadow">
+    <img src="img/clothes-img/top3.jpg" width="50px" height="50px" onclick="openModal1();currentSlide(3)" class="hover-shadow">
   </div>
   <div class="column_c">
-    <img src="img/clothes-img/top4.jpg" width="50px" height="50px" onclick="openModal();currentSlide(4)" class="hover-shadow">
+    <img src="img/clothes-img/top4.jpg" width="50px" height="50px" onclick="openModal1();currentSlide(4)" class="hover-shadow">
   </div>
 </div>
 
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">×</span>
+<div id="myModal1" class="modal">
+  <span class="close cursor" onclick="closeModal1()">×</span>
   <div class="modal-content">
 
     <div class="mySlides" style="text-align: center;">
@@ -364,7 +366,57 @@
   </div>
   <!-- 사진 보여짐 -->
 <div class="toggle-content" id="cpicture2" style="margin: 10px">
- 원래 여기에 코디 사진 있어야 하는데 왜 안되냐!
+ <!-- 모달 -->
+ <div class="container">
+  <div class="row_c">
+<div class="column_c">
+  <img src="img/clothes-img/pants1.jpg" width="50px" height="50px" onclick="openModal2();currentSlide(1)" class="hover-shadow">
+</div>
+<div class="column_c">
+  <img src="img/clothes-img/pants2.jpg" width="50px" height="50px" onclick="openModal2();currentSlide(2)" class="hover-shadow">
+</div>
+<div class="column_c">
+  <img src="img/clothes-img/pants3.jpg" width="50px" height="50px" onclick="openModal2();currentSlide(3)" class="hover-shadow">
+</div>
+<div class="column_c">
+  <img src="img/clothes-img/pants4.jpg" width="50px" height="50px" onclick="openModal2();currentSlide(4)" class="hover-shadow">
+</div>
+</div>
+
+<div id="myModal2" class="modal">
+<span class="close cursor" onclick="closeModal2()">×</span>
+<div class="modal-content">
+
+  <div class="mySlides2" style="text-align: center;">
+    <div class="numbertext">1 / 4</div>
+      <img src="img/clothes-img/pants1.jpg" style="width:50%;">
+  </div>
+
+  <div class="mySlides2"  style="text-align: center;">
+    <div class="numbertext">2 / 4</div>
+      <img src="img/clothes-img/pants2.jpg" style="width:50%">
+  </div>
+
+  <div class="mySlides2"  style="text-align: center;">
+    <div class="numbertext">3 / 4</div>
+      <img src="img/clothes-img/pants3.jpg" style="width:50%">
+  </div>
+
+  <div class="mySlides2"  style="text-align: center;">
+    <div class="numbertext">4 / 4</div>
+      <img src="img/clothes-img/pants4.jpg" style="width:50%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+</div>
+</div>
+</div>
+ <!-- 모달 -->
 </div>
 
   </div>
@@ -387,6 +439,7 @@
 </div>
   <!-- 사진 보여짐 -->
   <div class="toggle-content" id="cpicture3" style="margin: 10px">
+
     <div>
       <img class="checkedclothes" height="100px" width="100px"/>
       <img class="checkedclothes" height="100px" width="100px"/>
@@ -407,7 +460,10 @@
       <img class="checkedclothes" height="100px" width="100px"/>
       <img class="checkedclothes" height="100px" width="100px"/>
     </div>
+
+
   </div>
+
 </div>
   <!-- 새로 쓴 댓글 -->
 
